@@ -1,0 +1,49 @@
+
+<% layout('layout/boilerplate') %> 
+<link rel="stylesheet" href="/css/show.css">
+
+ <h3><%= usr.username %> </h3>
+ <h5><%= usr.email %> </h5>
+
+<div class="container" id="con">
+            
+               <% for(let obj of usr.BList){ %>
+                 
+                    <div class="card mb-3 border border-info" id="card">
+                        <div class="row" id="crd">
+                          <div class="col-md-5">
+                              <div id="imgbox">
+                            <% if(obj.image == 'N/A'){ %> 
+                                <img src="/resources/noi.jpg" class="card-img" alt="N/A">
+                            <% }else{ %> 
+                                <img src="<%=obj.image%>" class="card-img" alt="N/A">
+                            <% } %> 
+                              </div>
+                          </div>
+                            
+                          <div class="col-md-7" id="content">
+                            <div class="card-body">
+                                <h5>Title-<%= obj.name %></h5>
+                                <p class="card-text"><b>Type-</b><%= obj.Stype %> , Rated -<%= obj.rating %></p>
+                                <p class="card-text"><b>Genres-</b><%= obj.genres %></p>
+                                <p class="card-text"><b>Status-</b><%= obj.status %></p>
+                                <p class="card-text"><a href="<%= obj.siteURL %>"><b>Go to Site</b></a></p>
+
+                                <br><br><br><br><br><br><br><br><br><br>
+                                
+                                <form action="/lists/mylist" method="post">
+                                    <button class="btn btn-md btn-danger" value="<%= obj._id %>" name="showID">Remove from List</button>
+                                </form>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                       
+                    <% } %> 
+                
+    </div>
+</div>
+
+
+<img src="" alt="" srcset="">

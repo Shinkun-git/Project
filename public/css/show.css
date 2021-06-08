@@ -1,0 +1,39 @@
+
+body{
+    background-color: rgb(190, 189, 107);
+}
+
+#con{
+    transform: translateX(8rem);
+    padding-left: 0px;
+    max-width: 910px;
+}
+
+#box{
+    background-color: #333d29;
+    opacity: 0.6;
+}
+
+#card{
+    max-width: 900px;
+    border-top-left-radius: 2.3rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 10rem;
+}
+
+#imgbox{
+    background-color: lightcoral;
+    border: rgb(223, 57, 57) dashed 1px ;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 3rem;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 2rem;
+    padding: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    transform: translateX(5px) scale(0.995); 
+}
+
+.card-img{
+    object-fit: contain;
+}

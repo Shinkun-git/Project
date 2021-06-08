@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <%- include('../partials/Hnavbar') %> 
+    <br><br><br><br><br><br><br>
+    
+    <div class="container">
+        <%- include('../partials/flash') %> 
+        <div class="row justify-content-around">
+            <div class="col-4">
+                <form action="/Bingelist" class='form' method="post">
+                    <label for="search" class="form-label">Enter something</label>
+                    <input type="text" class="form-control" id="search" name="search" placeholder="type something">
+                    <div class="container offset-2">
+                        <div class="row justify-content-between">
+                            <div class="col col-5">
+                                  <input type="checkbox" name="genre" value="TV" id="1"> 
+                                        <label for="1">TV show</label>
+                            </div>
+                            <div class="col col-5">    
+                                   <input type="checkbox" name="genre" value="Anime" id="2"> 
+                                        <label for="2">Movies</label>
+                            </div>
+                            
+                            <div class="col col-5">
+                                <button id="srch" class="btn btn-md">Search</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/validForm.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

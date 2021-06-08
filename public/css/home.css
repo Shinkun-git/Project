@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(255, 168, 168);
+    background-image: url("/resources/homebg1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#search{
+    min-width: 350px;
+    border: 3px solid rgb(88, 189, 219);
+    border-radius: 15px;
+    border-left-color: brown;
+    border-right-color: rgb(138, 29, 240);
+    padding: 0.5em;
+    text-align: center;
+    transform: scaleX(1.3);
+    opacity: 0.55;
+    box-shadow: 6px 12px 6px 1px rgb(75, 73, 73);
+    
+}
+
+#srch{
+    transform: scaleX(1.7) ;
+    min-width: 7em;
+    box-shadow: 3px 7px 12px 1px rgb(122, 114, 114);
+    margin-left: 3em;
+    background-image: linear-gradient(#3c9dca,#75c5eb);
+}

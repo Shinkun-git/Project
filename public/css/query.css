@@ -1,0 +1,35 @@
+body{
+    background-color: bisque;
+}
+
+#ac-b{
+    padding: 0.4em;
+}
+
+#columns{
+    min-height: 30em;
+    max-width: 25em;
+}
+#cards{
+    scale:inherit;
+    width:100%;
+}
+#overlay{
+    scale:inherit;
+}
+#box{
+    height: 80%;
+    position:absolute;
+    left:1em;
+    right:1em;
+    top:2em;
+    background-color: #333d29;
+    opacity: 0.4;
+    transition: opacity 0.33s linear 0s;
+}
+
+#box:hover{
+     opacity: 0.8;
+}
+
+
