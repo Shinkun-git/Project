@@ -15,12 +15,12 @@
 
 <body>
     <%- include('../partials/Hnavbar') %> 
-    <br><br><br><br><br><br><br>
     
-    <div class="container">
+    
+    <div class="container-fluid d-flex" style="min-width: 650px;">
         <%- include('../partials/flash') %> 
-        <div class="row justify-content-around">
-            <div class="col-4">
+        <div class="row" id="frow">
+            <div class="col-4" id="hfrmcol">
                 <form action="/Bingelist" class='form' method="post">
                     <label for="search" class="form-label">Enter something</label>
                     <input type="text" class="form-control" id="search" name="search" placeholder="type something">
@@ -30,11 +30,10 @@
                                   <input type="checkbox" name="genre" value="TV" id="1"> 
                                         <label for="1">TV show</label>
                             </div>
-                            <div class="col col-5">    
-                                   <input type="checkbox" name="genre" value="Anime" id="2"> 
-                                        <label for="2">Movies</label>
+                            <div class="col col-5">
+                                  <input type="checkbox" name="genre" value="TV" id="1"> 
+                                        <label for="1">TV show</label>
                             </div>
-                            
                             <div class="col col-5">
                                 <button id="srch" class="btn btn-md">Search</button>
                             </div>

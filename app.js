@@ -21,8 +21,8 @@ const User = require('./models/User');
 
 const MongoDBStore = require("connect-mongo")(session);
 
-// const DBurl = 'mongodb://localhost:27017/Project'
-const DBurl = `${process.env.mongoATLS}`
+const DBurl = 'mongodb://localhost:27017/Project'
+// const DBurl = `${process.env.mongoATLS}`
 
 mongoose.connect( DBurl , {
     useNewUrlParser: true,
@@ -115,5 +115,5 @@ app.use((err, req ,res ,next)=>{
     res.status(status).render('error',{err})
 })
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 app.listen(port, () => { console.log(`Listening on port ${port}`) })
