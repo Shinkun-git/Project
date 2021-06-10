@@ -21,8 +21,8 @@ const User = require('./models/User');
 
 const MongoDBStore = require("connect-mongo")(session);
 
-const DBurl = 'mongodb://localhost:27017/Project'
-// const DBurl = `${process.env.mongoATLS}`
+// const DBurl = 'mongodb://localhost:27017/Project'
+const DBurl = `${process.env.mongoATLS}`
 
 mongoose.connect( DBurl , {
     useNewUrlParser: true,
