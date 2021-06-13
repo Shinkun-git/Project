@@ -1,12 +1,20 @@
 body{
-    position: absolute;
-    min-width: 650px ;
     width: 100vw;
-    background-color: rgb(255, 168, 168);
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    min-width: max-content;
+    background-image: url("/resources/bgart.jpg");
+    background-repeat: repeat;
+}
+#Hcontent{
+    height: 100vh;
     background-image: url("/resources/homebg1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 #navbr{
     min-width: 650px;
 }
@@ -47,16 +55,26 @@ body{
 
 @media screen and (max-width: 665px){
     #srch{
-        background-image: linear-gradient(#be3cca,#3f555f);
+        background-image: linear-gradient(#da9cb4,#6aafcf);
+        transform: scale(0.8) ;
     }
-    body{
-        background-size: 665px;
-    }
-}
-
-@media screen and (max-width: 665px){
     #search{
         height: 42px;
         padding: 2px;
     }
+    #Hcontent{
+        height: calc(100vh - 50px);
+    }
+    #hfrmcol{
+        margin-top: 4em;
+        align-self: flex-start;
+        margin-bottom: 4em;
+    }
 }
+#foot{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+
+

@@ -1,8 +1,4 @@
 
-body{
-    background-color: rgb(190, 189, 107);
-}
-
 #con{
     transform: translateX(8rem);
     padding-left: 0px;
@@ -19,6 +15,9 @@ body{
     border-top-left-radius: 2.3rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 10rem;
+    background-color: rgb(152, 203, 240);
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 #imgbox{
@@ -36,4 +35,10 @@ body{
 
 .card-img{
     object-fit: contain;
+}
+
+.card-body{
+    margin-top: 2em;
+    background-color: rgb(226, 194, 134);
+    
 }

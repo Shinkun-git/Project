@@ -1,0 +1,7 @@
+body{
+        width: 100%;
+        overflow-x: auto;
+        min-width: max-content;
+        background-image: url("/resources/bgart.jpg");
+        background-repeat: repeat;
+}

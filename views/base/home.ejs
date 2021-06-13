@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mintbootstrap.min.css">
     <link rel="stylesheet" href="css/home.css">
     <title>Document</title>
 </head>
@@ -15,10 +16,10 @@
 
 <body>
     <%- include('../partials/Hnavbar') %> 
+    <%- include('../partials/flash') %>
     
-    
-    <div class="container-fluid d-flex" style="min-width: 650px;">
-        <%- include('../partials/flash') %> 
+    <div class="container-fluid d-flex" id="Hcontent">
+         
         <div class="row" id="frow">
             <div class="col-4" id="hfrmcol">
                 <form action="/Bingelist" class='form' method="post">
@@ -42,9 +43,12 @@
 
                 </form>
             </div>
+            <div class="col-12" id="foot">
+                <%- include('../partials/footer') %> 
+            </div>
         </div>
     </div>
-
+    
 
     <script src="js/validForm.js"></script>
     

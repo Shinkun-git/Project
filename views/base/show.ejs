@@ -6,10 +6,10 @@
  <h5><%= usr.email %> </h5>
 
 <div class="container" id="con">
-            
-               <% for(let obj of usr.BList){ %>
+            <div class="row justify-content-center">
+              <% for(let obj of usr.BList){ %>
                  
-                    <div class="card mb-3 border border-info" id="card">
+                   <div class="card mb-3 border border-info" id="card">
                         <div class="row" id="crd">
                           <div class="col-md-5">
                               <div id="imgbox">
@@ -27,9 +27,11 @@
                                 <p class="card-text"><b>Type-</b><%= obj.Stype %> , Rated -<%= obj.rating %></p>
                                 <p class="card-text"><b>Genres-</b><%= obj.genres %></p>
                                 <p class="card-text"><b>Status-</b><%= obj.status %></p>
+                                <% if(obj.siteURL!== 'N/A'){ %> 
                                 <p class="card-text"><a href="<%= obj.siteURL %>"><b>Go to Site</b></a></p>
+                                <% } %> 
 
-                                <br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br>
                                 
                                 <form action="/lists/mylist" method="post">
                                     <button class="btn btn-md btn-danger" value="<%= obj._id %>" name="showID">Remove from List</button>
@@ -38,9 +40,11 @@
                           </div>
                         </div>
                       </div>
+                 
 
-                       
-                    <% } %> 
+                <% } %> 
+            </div>
+               
                 
     </div>
 </div>
