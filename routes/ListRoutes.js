@@ -16,11 +16,11 @@ router.get('/mylist', isLoggedin, async (req, res, next) => {
 router.post('/mylist', isLoggedin, async (req, res, next) => {
     const UserId = req.user._id;
     const { showID } = req.body;
-    console.log(UserId)
-    console.log(showID)
+    // console.log(UserId)
+    // console.log(showID)
     const UpdatedUser = await User.findByIdAndUpdate( UserId, { $pull: { BList: showID } } , { new: true })
     await List.findByIdAndDelete(showID)
-    console.log(UpdatedUser)
+    // console.log(UpdatedUser)
     req.flash('success', 'Successfully removed from Your list!!!')
     res.redirect('/lists/mylist')
 })
@@ -31,7 +31,7 @@ router.post('/addList', isLoggedin, async (req, res, next) => {
     const username = PresentUsr.username;
     const { retrieve } = req.body;
     const ParseData = JSON.parse(retrieve)
-    const { id, name, status, officialSite, type, rating, genres, image } = ParseData.show
+    const { id, name, status, officialSite, type, rating, genres, image , summary , language} = ParseData.show
 
     let imgInsrt = 'defaultValue';
     let Rstatus = 'defaultValue';
@@ -57,7 +57,9 @@ router.post('/addList', isLoggedin, async (req, res, next) => {
         rating: Rate,
         Stype: Rtype,
         siteURL: officialUrl,
-        genres: Gen
+        genres: Gen,
+        plot: summary,
+        language: language
     })
 
     PresentUsr.BList.push(newList);

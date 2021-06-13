@@ -1,8 +1,8 @@
 <% layout('layout/boilerplate') %>
 
-<link rel="stylesheet" href="css/query.css">
+<link rel="stylesheet" href="/css/query.css">
 
-<h2>Your query for "<b><%= search %></b>" of Category-"<b><%= genre %></b>", returned: - </h2>
+<h2>Your query for "<b><%= search %></b> returned: - </h2>
 <a href="/"><button class="btn btn-md btn-info mt-2 ">Go-Back<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
   </svg></button></a>
@@ -11,10 +11,10 @@
 
 <div class="container">
     <div class="row justify-content-around align-items-center">
-        
-        <% for(let obj of datas){ %> 
+        <% let i=0; %> 
+        <% for(let obj of datas){ %> <% i++; %> 
             <div class="col col-sm-8 col-md-6 col-xl-4 col-xxl-4 mb-3 border-2 border-primary" id="columns">
-                <div class="card bg-dark text-white mb-2 border-2 p-1 border-primary" id="cards">
+                <div class="card bg-dark text-white mb-5 border-2 p-1 border-primary" id="cards">
                     <% if(obj.show.image){ %> 
                         <img class="img" src="<%= obj.show.image.medium %>" alt="Not Available">
                     <% }else{ %>
@@ -31,7 +31,9 @@
                             </form></div>
 
                             <div class="card-body">
-                              <h5 class="card-title"><b>Name-</b> <%= obj.show.name %></h5>
+                              <h5 class="card-title"><%= obj.show.name %></h5>
+                              <p class="card-text"><b>Language-</b> <%= obj.show.language %></p>
+                              <p class="card-text"><b>Released-</b> <%= obj.show.premiered %> </p>
                             <p class="card-text"><b>Type-</b>- <%= obj.show.type %> <% if(obj.show.officialSite){ %> 
                                 <a href="<%= obj.show.officialSite %>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
@@ -42,6 +44,20 @@
                             </p>
                             <p class="card-text"><b>Status</b>- <%= obj.show.status %> ,<span><b>Rating-</b><%= obj.show.rating.average %></span> </p>
                             <p class="card-text"><b>genre-</b> <%= obj.show.genres.map(e=> e).join(',')%></p>
+                            <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h4 class="accordion-header" id="heading<%= i %>">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= i %>" aria-expanded="true" aria-controls="collapse<%= i %>">
+                                   <b> Plot (summary)</b>
+                                  </button>
+                                </h4>
+                                <div id="collapse<%= i %>" class="accordion-collapse collapse" aria-labelledby="heading<%= i %>" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body" style="background-color: black;">
+                                    <%- obj.show.summary %>
+                                  </div>
+                                </div>
+                            </div>
+                            </div>
                             </div>
                         </div>
 
@@ -50,7 +66,7 @@
                 </div>
 
             </div>
-                <% } %> 
+        <% } %> 
 
     </div>
 </div>

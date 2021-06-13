@@ -24,9 +24,12 @@
                           <div class="col-md-7" id="content">
                             <div class="card-body">
                                 <h5>Title-<%= obj.name %></h5>
-                                <p class="card-text"><b>Type-</b><%= obj.Stype %> , Rated -<%= obj.rating %></p>
+                                <p class="card-text"><b>Type-</b><%= obj.Stype %>   Lang: <%= obj.language %></p>
+                                <p class="card-text"><b>Rated -</b><%= obj.rating %></p>
+                                <p class="card-text"><b>-</b><%= obj.genres %></p>
                                 <p class="card-text"><b>Genres-</b><%= obj.genres %></p>
                                 <p class="card-text"><b>Status-</b><%= obj.status %></p>
+                                <p class="card-text"><b>PLOT-</b><%- obj.plot %></p>
                                 <% if(obj.siteURL!== 'N/A'){ %> 
                                 <p class="card-text"><a href="<%= obj.siteURL %>"><b>Go to Site</b></a></p>
                                 <% } %> 

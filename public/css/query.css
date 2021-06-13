@@ -23,13 +23,22 @@ body{
     left:1em;
     right:1em;
     top:2em;
-    background-color: #333d29;
-    opacity: 0.4;
+    background-color: #056fb6;
+    opacity: 0.3;
     transition: opacity 0.33s linear 0s;
 }
 
 #box:hover{
      opacity: 0.8;
 }
-
-
+.accordion-button{
+    text-decoration: black;
+    text-transform: uppercase;
+    text-align: center;
+    transform: scaleX(0.8);
+    padding: 4px;
+    background-image: none;
+}
+.accordion-body{
+    transform: translateY(2);
+}

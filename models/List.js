@@ -12,7 +12,9 @@ const ListSchema = new Schema({
             image: String,
             Stype : String,
             siteURL : String,
-            genres : [String]
+            genres : [String],
+            plot: String,
+            language: String
 })
 
 module.exports = mongoose.model('List' , ListSchema)

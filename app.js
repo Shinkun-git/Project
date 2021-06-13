@@ -97,9 +97,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/Bingelist', async (req, res , next) => {
-    const {search , genre} =req.body;
+    const {search} =req.body;
     const datas = await makereq(search);
-    res.render('base/query', { search, genre ,datas })
+    res.render('base/query', { search ,datas })
 })
 
 app.all("*" , (req ,res,next)=> {
