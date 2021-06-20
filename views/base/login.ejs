@@ -1,15 +1,17 @@
 <% layout('layout/boilerplate') %> 
-
-<div class="container">
-    <div class="row">
-        <div class="col-4 offset-3">
+<%- include('../partials/Hnavbar') %> 
+<%- include('../partials/flash') %>
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-5">
             <form action="/login" method="post" novalidate class="validateForm">
                 <label for="uname" class="form-label">User-Name</label>
                 <input type="text" id="uname" class="form-control" name="username" active required>
                 <label for="pass" class="form-label">Password</label>
-                <input type="password" id="pass" class="form-control" name="password" required>
+                <input type="password" id="pass" class="form-control" name="password" required><br>
                 <button class="btn btn-lg btn-primary">Log in</button>
             </form>
         </div>
     </div>
 </div>
+<br><br>

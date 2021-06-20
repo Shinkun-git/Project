@@ -1,18 +1,10 @@
 body{
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: absolute;
-    min-width: max-content;
-    background-image: url("/resources/bgart.jpg");
-    background-repeat: repeat;
-}
-#Hcontent{
-    height: 100vh;
     background-image: url("/resources/homebg1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+#Hcontent{
+    height: 90%;
 }
 
 #navbr{
@@ -65,16 +57,7 @@ body{
     #Hcontent{
         height: calc(100vh - 50px);
     }
-    #hfrmcol{
-        margin-top: 4em;
-        align-self: flex-start;
-        margin-bottom: 4em;
-    }
-}
-#foot{
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
+    
 }
 
 
