@@ -3,34 +3,29 @@
     <%- include('../partials/flash') %>
     <link rel="stylesheet" href="/css/home.css">
 
-    <div class="container-fluid d-flex" id="Hcontent">
+    <div class="container-fluid" id="Hcontent">
 
         <div class="row justify-content-center" id="frow">
-            <div class="col-6" id="hfrmcol">
-                <h4>Lets Binge!!!</h4>
-                <form action="/Bingelist" class='form' method="post">
-                    <input type="text" class="form-control" id="search" name="search" placeholder="Search Shows by Name"><br>
-                    <div class="container offset-2">
-                        <div class="row justify-content-between">
-                            <div class="col col-5">
+            <div class="col-md-8" id="hfrmcol">
+                <div class="container-fluid">
+                    <div class="row justify-content-around">
+                        <div class="col-sm-7"><div class="display-5">Lets Binge some shows!!!</div></div>
+                        <div class="col-sm-11">
+                        <form action="/Bingelist" class='form' method="post">
+                            <div class="container-fluid" id="frmcntnt">
+                            <div class="row justify-content-center">
+                            <div class="col-8" id="qbox">
+                                <input type="text" class="form-control" id="search" name="search" placeholder="Search Shows by Name" style="width:100%;">
+                            </div>
+                            <div class="col-5 mt-3" id="srchcol">
                                 <button id="srch" class="btn btn-md">Search</button>
                             </div>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>  
+                        </form>
+                        </div>
+                    </div>  
+                </div>  
+            </div>
         </div>
-    </div>
-
-    <script src="js/validForm.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-    crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
-
-</html>
+        </div>

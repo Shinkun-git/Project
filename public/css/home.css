@@ -3,12 +3,12 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-#Hcontent{
-    height: 90%;
+.display-5{
+    color: rgba(224, 217, 110, 0.945) ;
+    margin-bottom: 9px;
 }
-
-#navbr{
-    min-width: 650px;
+#Hcontent{
+    margin-bottom: 12em;
 }
 #search{
     border: 3px solid rgb(88, 189, 219);
@@ -17,7 +17,6 @@ body{
     border-right-color: rgb(138, 29, 240);
     padding: 0.5em;
     text-align: center;
-    transform: scaleX(1);
     opacity: 0.55;
     box-shadow: 6px 12px 6px 1px rgb(75, 73, 73);
 }
@@ -32,14 +31,9 @@ body{
     background-image: linear-gradient(#3c9dca,#75c5eb);
 }
 
-#hfrmcol{
-    align-self: center;
-}
-
 #frow{
-    margin-top: 6em;
+    margin-top: 12em;
     justify-content:center;
-    align-items: center;
 }
 #navbarNavAltMarkup div{
     text-decoration: seagreen;
@@ -47,8 +41,7 @@ body{
 
 @media screen and (max-width: 665px){
     #srch{
-        background-image: linear-gradient(#da9cb4,#6aafcf);
-        transform: scale(0.8) ;
+        transform: scale(1);
     }
     #search{
         height: 42px;
@@ -59,5 +52,11 @@ body{
     }
     
 }
-
-
+@media screen and (max-width: 440px){
+    #qbox,#srchcol{
+        width: 95%;
+    }
+    #srch{
+        scale: 0.8;
+    }
+}

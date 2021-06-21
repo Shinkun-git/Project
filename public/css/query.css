@@ -1,7 +1,10 @@
 body{
     background-color: bisque;
 }
-
+#site{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(245, 245, 245);
+}
 #ac-b{
     padding: 0.4em;
 }
@@ -13,12 +16,15 @@ body{
 #cards{
     scale:inherit;
     width:100%;
+    min-height: 520px;
 }
 #overlay{
-    scale:inherit;
+    scale:inherit
 }
+
 #box{
-    height: 80%;
+    height: 87%;
+    width: 90%;
     position:absolute;
     left:1em;
     right:1em;
@@ -41,4 +47,9 @@ body{
 }
 .accordion-body{
     transform: translateY(2);
+}
+.card-text{
+    color: rgb(175, 212, 8);
+    text-shadow: rgb(37, 44, 43);
+    font-weight: 900;
 }

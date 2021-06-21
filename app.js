@@ -87,15 +87,14 @@ const makereq = async (term) => {
     const result = await axios('http://api.tvmaze.com/search/shows', config)
     return result.data;
 }
-
-
 app.use('/', UserRoutes);
 app.use('/lists', ListRoutes);
-
 app.get('/', (req, res) => {
     res.render('base/home')
 })
-
+app.get('/about', (req,res)=>{
+    res.render('base/about');
+})
 app.post('/Bingelist', async (req, res , next) => {
     const {search} =req.body;
     const datas = await makereq(search);
