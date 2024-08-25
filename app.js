@@ -90,12 +90,12 @@ const makereq = async (term) => {
 app.use('/', UserRoutes);
 app.use('/lists', ListRoutes);
 app.get('/', (req, res) => {
-    res.render('./base/home')
+    res.render('base/home')
 })
 app.get('/about', (req,res)=>{
     res.render('base/about');
 })
-app.post('/', async (req, res , next) => {
+app.post('/BingeList', async (req, res , next) => {
     const {search} =req.body;
     const datas = await makereq(search);
     res.render('base/query', { search ,datas })
