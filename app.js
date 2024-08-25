@@ -10,7 +10,7 @@ const mongoose = require('mongoose')
 const UserRoutes = require('./routes/UserRoutes')
 const ListRoutes = require('./routes/ListRoutes')
 const  ExpressError = require('./utils/expressError')
-
+const wrapAsync = require('./utils/wrapAsync')
 const engine = require('ejs-mate')
 const axios = require('axios')
 const session = require('express-session')
@@ -95,11 +95,11 @@ app.get('/', (req, res) => {
 app.get('/about', (req,res)=>{
     res.render('base/about');
 })
-app.post('/BingeList', async (req, res , next) => {
+app.post('/BingeList', wrapAsync(async (req, res , next) => {
     const {search} =req.body;
     const datas = await makereq(search);
     res.render('base/query', { search ,datas })
-})
+}))
 
 app.all("*" , (req ,res,next)=> {
     const msg = 'Page not Found!!!' 
