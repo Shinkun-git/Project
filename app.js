@@ -83,9 +83,16 @@ app.use((req, res, next) => {
 //-----------------------------------------------------------------------------------------------
 
 const makereq = async (term) => {
-    const config = { params: { q: term } }
-    const result = await axios('http://api.tvmaze.com/search/shows', config)
-    return result.data;
+    try{
+        const config = { params: { q: term } }
+        const result = await axios('http://api.tvmaze.com/search/shows', config)
+        return result.data;
+    }catch(e){
+        console.log("**********");
+        console.log(e);
+        console.log("**********");
+        throw e;
+    }
 }
 app.use('/', UserRoutes);
 app.use('/lists', ListRoutes);
