@@ -84,7 +84,7 @@ app.use((req, res, next) => {
 
 const makereq = async (term) => {
     try{
-        const config = { params: { q: term } }
+        const config = { params: { q: term }, timeout : 5000 }
         const result = await axios('http://api.tvmaze.com/search/shows', config)
         return result.data;
     }catch(e){
